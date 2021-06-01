@@ -29,3 +29,20 @@ class Kid(Person):
     print(f"私の名前は{self.name}です。年齢は{age}歳です")
 kid = Kid("エレン")
 kid.say_hello(15)
+
+# knock41
+# nationality変数とsay_my_name()をprivateメソッドに
+class Person():
+  __nationality = "japan"
+  # コンストラクタの設定
+  def __init__(self,name):
+      self.name = name
+  def say_hello(self):
+    print(f"こんにちは、私の国籍は,{self.nationality}です")
+  def __say_my_name(self):
+    print(f"私の名前は{self.name}です")
+nakagawa = Person("中川")
+# 外からアクセスできない
+nakagawa.say_my_name()
+
+
